@@ -5,7 +5,7 @@ CEP e obter a previsão do tempo com base em coordenadas geográficas (latitude 
 O projeto foi desenvolvido utilizando **HTML**, **CSS**, **JavaScript** e **Bootstrap** para estilização e responsividade.
 
 ## 🌍 Acesse o Projeto
-🔗 [Clique aqui para acessar](https://rodrigo-falcao.github.io/Projeto-DNC/)
+🔗 [Clique aqui para acessar](https://rodrigo-falcao.github.io/Bootstrap-Api/)
 
 ## 📌 Funcionalidades
 
