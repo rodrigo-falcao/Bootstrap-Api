@@ -63,5 +63,5 @@ Uso de container, row, col e table-responsive para garantir que o layout se adap
 
 ## 📸Screenshots
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/0636028d-8b91-45dd-8dbd-c47a43611645" alt="Screenshot do projeto">
+  <img src="https://github.com/user-attachments/assets/2c95e218-1358-4bee-a80e-e93381893992" alt="Screenshot do projeto">
 </p>
