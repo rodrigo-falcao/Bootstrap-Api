@@ -27,9 +27,16 @@ const getAdressbyCep = () => {
                 throw new Error('CEP não encontrado')
             }
             console.log(response)  
-            document.getElementById('logradouro').innerText = response.logradouro
-            document.getElementById('bairro').innerText = response.bairro
-            document.getElementById('uf').innerText = response.uf
+            // mobile
+            document.querySelector('[data-logradouro-mobile]').innerText = response.logradouro || 'N/A';
+            document.querySelector('[data-bairro-mobile]').innerText = response.bairro || 'N/A';
+            document.querySelector('[data-uf-mobile]').innerText = response.uf || 'N/A';
+            document.querySelector('[data-regiao-mobile]').innerText = response.regiao ||'N/A'; 
+
+            document.querySelector('[data-logradouro-desktop]').innerText = response.logradouro || 'N/A';
+            document.querySelector('[data-bairro-desktop]').innerText = response.bairro || 'N/A';
+            document.querySelector('[data-uf-desktop]').innerText = response.uf || 'N/A';
+            document.querySelector('[data-regiao-desktop]').innerText = response.regiao ||'N/A';
         })
         .catch((error) => {
             alert('CEP não encontrado')
