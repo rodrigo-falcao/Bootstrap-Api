@@ -14,12 +14,11 @@ const handleButtonClick = (event) => {
         return
     }
 
-    getAdressbyCep(); 
-    getWeather(); 
+    getAdressbyCep(cep); 
+    getWeather(longitude, latitude); 
 };
 
-const getAdressbyCep = () => {
-    const cep = document.getElementById('cep').value
+const getAdressbyCep = (cep) => {
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
         .then(response => response.json())
         .then(response => {
@@ -27,16 +26,10 @@ const getAdressbyCep = () => {
                 throw new Error('CEP não encontrado')
             }
             console.log(response)  
-            // mobile
-            document.querySelector('[data-logradouro-mobile]').innerText = response.logradouro || 'N/A';
-            document.querySelector('[data-bairro-mobile]').innerText = response.bairro || 'N/A';
-            document.querySelector('[data-uf-mobile]').innerText = response.uf || 'N/A';
-            document.querySelector('[data-regiao-mobile]').innerText = response.regiao ||'N/A'; 
-
-            document.querySelector('[data-logradouro-desktop]').innerText = response.logradouro || 'N/A';
-            document.querySelector('[data-bairro-desktop]').innerText = response.bairro || 'N/A';
-            document.querySelector('[data-uf-desktop]').innerText = response.uf || 'N/A';
-            document.querySelector('[data-regiao-desktop]').innerText = response.regiao ||'N/A';
+            document.getElementById('logradouro').innerText = response.logradouro || 'N/A';
+            document.getElementById('bairro').innerText = response.bairro || 'N/A';
+            document.getElementById('uf').innerText = response.uf || 'N/A';
+            document.getElementById('regiao').innerText = response.regiao ||'N/A';
         })
         .catch((error) => {
             alert('CEP não encontrado')
@@ -44,9 +37,7 @@ const getAdressbyCep = () => {
         });
 }
 
-const getWeather = () => {
-    let longitude = document.getElementById('longitude').value
-    let latitude = document.getElementById('latitude').value
+const getWeather = (longitude, latitude) => {
     fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=apparent_temperature,relative_humidity_2m`)
     .then(response => response.json())
     .then(response => {

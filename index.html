@@ -56,54 +56,45 @@
                     Resultado da busca por CEP
                     <img src="./Assets/image_local.svg" alt="Ícone de localização" style="width: 54px;">
                 </h3>
-                <div class="container mt-5">
-                    <h3 class="fs-5 text-center mb-3">Resultado da busca por CEP</h3>
-                
-                    <!-- MOBILE -->
-                    <div class="d-block d-md-none">
-                        <div class="d-flex flex-column gap-2">
-                            <div class="p-2 border rounded bg-light">
-                                <strong>Logradouro/Nome:</strong> 
-                                <span data-logradouro-mobile>Praça da Sé</span>
-                            </div>
-                            <div class="p-2 border rounded bg-light">
-                                <strong>Bairro/Distrito:</strong> 
-                                <span data-bairro-mobile>Sé</span>
-                            </div>
-                            <div class="p-2 border rounded bg-light">
-                                <strong>Localidade/UF:</strong> 
-                                <span data-uf-mobile>SP</span>
-                            </div>
-                            <div class="p-2 border rounded bg-light">
-                                <strong>Região:</strong> 
-                                <span data-regiao-mobile>Sudeste</span>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <!-- PC/NOTEBOOK -->
-                    <div class="d-none d-md-block">
-                        <div class="table-responsive">
-                            <table class="table text-center">
-                                <thead class="bg-primary text-white">
-                                    <tr>
-                                        <th scope="col">Logradouro/Nome</th>
-                                        <th scope="col">Bairro/Distrito</th>
-                                        <th scope="col">Localidade/UF</th>
-                                        <th scope="col">Região</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><span data-logradouro-desktop>Praça da Sé</span></td>
-                                        <td><span data-bairro-desktop>Sé</span></td>
-                                        <td><span data-uf-desktop>SP</span></td>
-                                        <td><span data-regiao-desktop>Sudeste</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                <div class="table-responsive">
+                    <table class="table text-center">
+                        <thead class="bg-primary text-white">
+                            <tr>
+                                <th scope="col">Logradouro/Nome</th>
+                                <th scope="col">Bairro/Distrito</th>
+                                <th scope="col">Localidade/UF</th>
+                                <th scope="col">Região</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="d-flex flex-column flex-md-row align-items-start justify-content-center">
+                                        <strong class="d-md-none">Logradouro/Nome:</strong>
+                                        <span id="logradouro">Praça da Sé</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flex-column flex-md-row align-items-start justify-content-center">
+                                        <strong class="d-md-none">Bairro/Distrito:</strong>
+                                        <span id="bairro">Sé</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flex-column flex-md-row align-items-start justify-content-center">
+                                        <strong class="d-md-none">Localidade/UF:</strong>
+                                        <span id="uf">SP</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flex-column flex-md-row align-items-start justify-content-center">
+                                        <strong class="d-md-none">Região:</strong>
+                                        <span id="regiao">Sudeste</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="container mt-5">
